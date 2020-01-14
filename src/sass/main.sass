@@ -1,0 +1,290 @@
+@font-face 
+	font-family: "FuturaBT-light"
+	src: url('../fonts/Futura-bt-light.ttf')
+	url: ('../fonts/Futura-bt-light.ttf') format('ttf')
+	font-weight: normal
+	font-style: normal
+@font-face 
+	font-family: "FuturaBT-book"
+	src: url('../fonts/Futura-bt-book.ttf')
+	url: ('../fonts/Futura-bt-book.ttf') format('ttf')
+	font-weight: normal
+	font-style: normal
+
+@mixin text-part__text 
+	font-family: "Poppins", sans-serif
+	font-size: 16px
+	color: rgba(255, 255, 255, 0.902)
+	line-height: 2
+	margin-bottom: 80px
+	width: 86.9%
+@mixin main-button
+	height: 80px
+	border: 0
+	color: #fff
+	background-image: linear-gradient( -150deg, rgb(0,191,255) 0%, rgb(0,158,237) 44%, rgb(0,125,219) 100%)
+	margin-left: -4px
+	cursor: pointer
+	font-family: "Poppins", sans-serif
+	font-weight: 500
+	font-size: 20px
+	padding: 0
+	letter-spacing: 0.07rem
+* 
+	scroll-behavior: smooth
+
+ul
+	list-style-type: none
+	padding: 0
+	margin: 0
+a 
+	text-decoration: none
+	color: #fff
+input::placeholder
+	font-family: "Poppins", sans-serif
+	font-size: 14px
+	color: #816fd7
+	// color: red 	
+.header-wrap 
+	height: 100vh
+	background-color: #3b11b1
+	background-image: url("../images/bg-header.png")
+	background-repeat: no-repeat
+	background-size: cover
+	color: #ffffff
+	.container
+		width: 1420px
+		height: 100%
+		margin: 0 auto
+		.header__fixed
+			width: 100%
+			position: fixed
+			top: 0
+			background-color:rgba(0, 0, 0, 0.5)
+			display: flex
+			justify-content: space-between
+			align-items: center
+			.logo
+				// width: 115px
+				margin: 50px 0 0 0 
+				font-size: 26px
+				font-family: "FuturaBT-light"
+				line-height: 0.692
+				span 
+					color: #00bfff
+			.header-nav
+				width: 365px
+				margin-right: 4%
+				margin-top: 25px
+				font-family: "Poppins", sans-serif
+				font-weight: 500
+				font-size: 18px
+				line-height: 2
+				ul 
+					display: flex
+					margin-top: 10px
+					li 
+						cursor: pointer
+						a 
+							display: block
+							padding: 10px 20px
+			.header-button
+				width: 140px
+				height: 60px
+				margin-top: 30px
+				border-radius: 5px
+				border: 0
+				font-family: "Poppins", sans-serif
+				font-weight: 400
+				font-size: 20px
+				background-image: linear-gradient( 0deg, rgb(0,191,255) 0%, rgb(0,158,237) 44%, rgb(0,125,219) 100%)
+				color: #ffffff
+				cursor: pointer
+				line-height: 1.8
+
+.weather-forecast
+	overflow: hidden
+	width: 100vw
+	height: 100vh
+	.weather-forecast-wrap
+		display: flex
+		justify-content: space-between
+		flex-direction: row
+		.weather-forecast__text
+			@include text-part__text
+		.weather-forecast__search
+			position: relative	
+			.weather-forecast__input
+				padding: 31px 31px 31px 65px	
+				background-color: #5644cf
+				border: 0
+				border-radius: 5px 0 0 5px
+				outline: none
+				width: 65.5%
+			.weather-forecast__loop
+				position: absolute
+				top: 29px
+				left: 30px	
+			.weather-forecast__button
+				@include main-button
+				border-radius: 0px 5px 5px 0px
+				width: 200px
+		.weather-forecast__notations
+				font-family: "Poppins", sans-serif
+				font-weight: 500
+				font-size: 16px
+				margin-top: 30px
+
+
+
+
+
+
+.weather-forecast__right
+	width: 61%
+	height: 780px
+	margin-top: 210px
+	.weather-app
+		background-image: linear-gradient( 100deg, rgb(33,5,148) 0%, rgb(65,20,184) 100%)
+		border-radius: 10px
+		overflow: hidden
+		height: 780px
+		&__header
+			height: 150px
+			background-color: #481fb8
+			display: flex
+			flex-direction: row
+			align-items: center
+			.notification
+			    background-color: #f8d7da
+			    display: none
+			.weather-app__icon 
+			    display: flex
+			    justify-content: center
+			    align-items: center
+			    width: 17%
+			    height: 100%
+			    margin-right: 10px
+			.weather-app__title
+				font-family: "Poppins", sans-serif
+				font-weight: 500
+				.weather-app__title-text
+					font-size: 28px
+					letter-spacing: 1.6px
+					margin: -8px 0 0 0	
+				.weather-app__location
+					font-size: 20px
+					display: flex
+					margin: 30px 0 0 0
+					letter-spacing: 1.05px						
+		&__body
+			display: flex
+			justify-content: space-between
+			height: 590px
+			margin: 20px 10px
+			.weather-app__left
+				position: relative
+				font-family: "Poppins", sans-serif
+				font-weight: 500 
+				width: 42%
+				height: inherit
+				background-color: #3c19ab
+				.weather-app__icon 
+					margin: 140px 0 0 0
+					img
+						width: 90%
+						height: 90%
+						display: block
+						margin: 0 auto
+				.weather-app__left-wrap
+					position: absolute
+					top: 210px
+					left: 87px
+					.weather-app__left-degrees
+						font-size: 100px
+						color: #fff
+						text-align: center
+						span
+							font-size: 80px
+					.weather-app__left-description
+						font-size: 20px		
+			.weather-app__right	
+				width: 55%
+				height: inherit
+				background-color: #3513ac
+				padding: 60px 40px 50px 30px
+				.weather-app__spark, .weather-app__right-mph, .weather-app__right-ms 
+					display: flex
+					height: 65px
+					margin-bottom: 65px
+					p
+						font-family: "Poppins", sans-serif
+						font-weight: 400
+						font-size: 50px
+						align-self: center
+						margin-left: 20px
+						margin-bottom: 75px
+						span 
+							font-size: 20px	
+				.weather-app__right-ms
+					height: 50px
+				.weather-app__right-forecast
+					font-family: "Arial", sans-serif
+					font-size: 18px
+					font-weight: 400
+					margin: 0
+					p
+						font-family: "Arial", sans-serif
+						font-size: 14px
+
+.weather-information
+	width: 100%
+	height: 900px
+	background-color: #3810ad
+.weather-forecast__left
+	width: 47%
+	padding-top: 277px
+	margin-right: 2%
+.weather-forecast__title
+	font-family: "FuturaBT-book"
+	font-size: 48px
+	line-height: 1.7
+	letter-spacing: 0.1rem
+	margin-top: 0
+.weather-forecast--change
+	padding-top: 220px
+	overflow: auto
+	content: ""
+	clear: both
+	display: table
+	float: left
+	margin-right: 0
+.weather-information__left__text
+	@include text-part__text
+.weather-information__left__button
+	@include main-button
+	border-radius: 5px
+	width: 230px
+.weather-information__right
+	float: right
+	padding-top: 145px
+	.weather-information__right__img
+		
+
+.header_glue
+    position: fixed
+    top: 0
+    left: 0
+    right: 0	
+    animation: showElement
+    animation-duration: 1s
+@keyframes showElement
+    0% 
+        opacity: 0
+        top: -70px       
+    100% 
+        opacity: 1
+        top: 0
+
+
+
