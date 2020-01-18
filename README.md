@@ -1,4 +1,4 @@
-# Weather test project
+# Weather test project //Pokhyla Dmitry
 
 > Weather widget with geolocation
 
