@@ -11,5 +11,6 @@ npm i
 # build for production with minification
 gulp
 
-# open dist/index.html
+# open 
+dist/index.html
 ```
